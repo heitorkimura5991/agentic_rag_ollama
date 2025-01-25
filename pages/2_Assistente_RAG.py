@@ -8,7 +8,7 @@ from vector_db import add_to_vector_collection, query_collection, re_rank_cross_
 
 def main() -> None:
     with st.sidebar:
-        st.set_page_config(page_title="Docs")
+        st.set_page_config(page_title="Assistente RAG")
         uploaded_file = st.file_uploader(
             "**Carregue arquivos em PDF**", type=["pdf"], accept_multiple_files=False
         )
@@ -32,7 +32,7 @@ def main() -> None:
             add_to_vector_collection(url_splits, "url_1")
             st.success("Dados adicionados ao banco!")
 
-    st.header("AI Assistant")
+    st.title("Assistente RAG")
     prompt = st.text_area("**Pergunte sobre o documento**")
     ask = st.button("Enviar")
 

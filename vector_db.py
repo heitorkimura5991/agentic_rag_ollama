@@ -1,4 +1,4 @@
-from langchain_core.documents import Document
+from llama_index.core import Document
 
 from chromadb.utils.embedding_functions.ollama_embedding_function import OllamaEmbeddingFunction
 import chromadb
